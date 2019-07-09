@@ -36,6 +36,7 @@ class App extends PureComponent {
       ...state,
       height: `${this.visiableData.length * 40}px`,
     }));
+
     (ReactDOM.findDOMNode(this.outerNode.current) as any).addEventListener(
       'scroll',
       throttle(
@@ -56,7 +57,6 @@ class App extends PureComponent {
     return (
       <div>
         <div
-          id={'outer'}
           ref={this.outerNode as any}
           style={{
             border: '1px solid black',
